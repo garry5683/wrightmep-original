@@ -5,7 +5,7 @@ import { viteSourceLocator } from "@metagptx/vite-plugin-source-locator";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/wrightmep/',
+  // base: '/wrightmep/',
   plugins: [
     viteSourceLocator({
       prefix: "mgx",
