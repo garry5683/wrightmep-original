@@ -1,10 +1,21 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Phone, Mail } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const navigate = useNavigate();
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -13,61 +24,73 @@ export default function Header() {
     }
   };
 
+  const handleNavigation = (path: string, sectionId?: string) => {
+    if (path === '/') {
+      navigate('/', { state: sectionId ? { scrollTo: sectionId } : undefined });
+    } else {
+      navigate(path);
+    }
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 bg-white backdrop-blur-sm border-b border-blue-200 z-50 shadow-sm">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
-             {/* <div className="w-30 h-16 bg-gradient-to-r from-white-600 to-white-700 rounded-xl flex items-center justify-center shadow-lg"> */}
-              <img src="assets/wrightmeplogo.png" alt="Logo" className="h-16 w-30 p-1" />            
-              {/* </div> */}
+            <div 
+              onClick={() => handleNavigation('/')}
+              className="flex items-center space-x-3 cursor-pointer group"
+            >
+              {/* <div className="w-30 h-20 rounded-xl flex items-center justify-center group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-105"> */}
+                            <img src="assets/wrightmeplogo.png" alt="Logo" className="h-20 w-30 p-1" />            
             {/* <div>
               <h1 className="text-xl font-bold text-blue-900">Wright MEP</h1>
               <p className="text-xs text-black-600">Engineering Solution</p>
             </div> */}
+          {/* </div> */}
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <button 
-              onClick={() => scrollToSection('home')}
+              onClick={() => handleNavigation('/','home')}
               className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
             >
               Home
             </button>
             <button 
-              onClick={() => scrollToSection('services')}
+              onClick={() => handleNavigation('/','services')}
               className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
             >
               Our Services
             </button>
             <button 
-              onClick={() => scrollToSection('gallery')}
+              onClick={() => handleNavigation('/','gallery')}
               className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
             >
               Project Gallery
             </button>
             <button 
-              onClick={() => scrollToSection('awards')}
+              onClick={() => handleNavigation('/','awards')}
               className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
             >
               Awards
             </button>
             <button 
-              onClick={() => scrollToSection('team')}
+              onClick={() => handleNavigation('/','team')}
               className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
             >
               Team
             </button>
             <button 
-              onClick={() => scrollToSection('about')}
+              onClick={() => handleNavigation('/','about')}
               className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
             >
               About Us
             </button>
             <button 
-              onClick={() => scrollToSection('contact')}
+              onClick={() => handleNavigation('/','contact')}
               className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
             >
               Contact
@@ -81,7 +104,7 @@ export default function Header() {
               <span>+91-98765-43210</span>
             </div>
             <Button 
-              onClick={() => scrollToSection('contact')}
+              onClick={() => handleNavigation('/','contact')}
               className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5"
             >
               Free Consultation
@@ -102,50 +125,50 @@ export default function Header() {
           <div className="md:hidden py-4 border-t border-blue-200">
             <nav className="flex flex-col space-y-4">
               <button 
-                onClick={() => scrollToSection('home')}
+                onClick={() => handleNavigation('/','home')}
                 className="text-left text-gray-700 hover:text-blue-600 transition-colors font-medium"
               >
                 Home
               </button>
               <button 
-                onClick={() => scrollToSection('services')}
+                onClick={() => handleNavigation('/','services')}
                 className="text-left text-gray-700 hover:text-blue-600 transition-colors font-medium"
               >
                 Services
               </button>
               <button 
-                onClick={() => scrollToSection('gallery')}
+                onClick={() => handleNavigation('/','gallery')}
                 className="text-left text-gray-700 hover:text-blue-600 transition-colors font-medium"
               >
                 Project Gallery
               </button>
               <button 
-                onClick={() => scrollToSection('awards')}
+                onClick={() => handleNavigation('/','awards')}
                 className="text-left text-gray-700 hover:text-blue-600 transition-colors font-medium"
               >
                 Awards
               </button>
               <button 
-                onClick={() => scrollToSection('team')}
+                onClick={() => handleNavigation('/','team')}
                 className="text-left text-gray-700 hover:text-blue-600 transition-colors font-medium"
               >
                 Team
               </button>
               <button 
-                onClick={() => scrollToSection('about')}
+                onClick={() => handleNavigation('/','about')}
                 className="text-left text-gray-700 hover:text-blue-600 transition-colors font-medium"
               >
                 About
               </button>
               <button 
-                onClick={() => scrollToSection('contact')}
+                onClick={() => handleNavigation('/','contact')}
                 className="text-left text-gray-700 hover:text-blue-600 transition-colors font-medium"
               >
                 Contact
               </button>
               <div className="pt-4 border-t border-blue-200">
                 <Button 
-                  onClick={() => scrollToSection('contact')}
+                  onClick={() => handleNavigation('/','contact')}
                   className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white"
                 >
                   Free Consultation

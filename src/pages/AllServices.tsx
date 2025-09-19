@@ -17,87 +17,12 @@ import {
 
 export default function AllServices() {
   const navigate = useNavigate();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
-
-  // const services = [
-  //   {
-  //     icon: AlertTriangle,
-  //     title: "Fire Alarm Conventional System",
-  //     description: "Traditional fire detection systems with zone-based monitoring for smaller buildings and facilities.",
-  //     features: ["Zone-based detection", "Cost-effective solution", "Easy maintenance", "Reliable performance"],
-  //     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop",
-  //     category: "Detection Systems"
-  //   },
-  //   {
-  //     icon: Radio,
-  //     title: "Fire Alarm Addressable System",
-  //     description: "Advanced fire detection with individual device addressing for precise location identification.",
-  //     features: ["Individual device addressing", "Precise location detection", "Advanced diagnostics", "Scalable solution"],
-  //     image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&h=300&fit=crop",
-  //     category: "Detection Systems"
-  //   },
-  //   {
-  //     icon: Droplets,
-  //     title: "Wet Riser System",
-  //     description: "Vertical water supply systems for firefighting in high-rise buildings and commercial complexes.",
-  //     features: ["High-rise compatibility", "Reliable water supply", "Code compliant", "Regular testing"],
-  //     image: "https://images.unsplash.com/photo-1581092162384-8987c1d64718?w=400&h=300&fit=crop",
-  //     category: "Suppression Systems"
-  //   },
-  //   {
-  //     icon: Volume2,
-  //     title: "PA & Talk Back System",
-  //     description: "Public address and two-way communication systems for emergency announcements and coordination.",
-  //     features: ["Clear audio quality", "Two-way communication", "Emergency broadcasting", "Zone control"],
-  //     image: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=400&h=300&fit=crop",
-  //     category: "Communication Systems"
-  //   },
-  //   {
-  //     icon: FileText,
-  //     title: "Fire NOC",
-  //     description: "Fire No Objection Certificate services for new constructions and building approvals.",
-  //     features: ["Documentation support", "Authority liaison", "Compliance verification", "Quick processing"],
-  //     image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=300&fit=crop",
-  //     category: "Certification Services"
-  //   },
-  //   {
-  //     icon: RotateCcw,
-  //     title: "Fire NOC Renewal",
-  //     description: "Renewal services for existing Fire NOC certificates to maintain compliance.",
-  //     features: ["Renewal documentation", "Compliance updates", "Authority coordination", "Timely processing"],
-  //     image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&h=300&fit=crop",
-  //     category: "Certification Services"
-  //   },
-  //   {
-  //     icon: Zap,
-  //     title: "Fire Extinguisher Refilling",
-  //     description: "Professional refilling and maintenance services for all types of fire extinguishers.",
-  //     features: ["All extinguisher types", "Quality chemicals", "Pressure testing", "Certification provided"],
-  //     image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
-  //     category: "Maintenance Services"
-  //   },
-  //   {
-  //     icon: Calculator,
-  //     title: "Fire System BOQ Preparation",
-  //     description: "Detailed Bill of Quantities preparation for fire safety system installations.",
-  //     features: ["Accurate estimates", "Material specifications", "Cost optimization", "Technical documentation"],
-  //     image: "https://images.unsplash.com/photo-1554224154-26032fced8bd?w=400&h=300&fit=crop",
-  //     category: "Consulting Services"
-  //   },
-  //   {
-  //     icon: Users,
-  //     title: "Fire System Consulting",
-  //     description: "Expert consulting services for fire safety planning, design, and compliance strategies.",
-  //     features: ["Expert consultation", "System design", "Compliance guidance", "Risk assessment"],
-  //     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop",
-  //     category: "Consulting Services"
-  //   }
-  // ];
 
 
 const services = [
   {
-    icon: AlertTriangle,
     title: "Fire Hydrant System",
     description: "A fire hydrant system is an active fire protection measure that provides a reliable and pressurized source of water to help firefighters extinguish fires.",
     features: [
@@ -110,7 +35,6 @@ const services = [
     category: "Fire Suppression Systems"
   },
   {
-    icon: AlertTriangle,
     title: "Fire Sprinkler System",
     description: "A sprinkler fire system is an automatic water-based fire protection system that includes a water supply and sprinkler heads that discharge water when a fire is detected by heat.",
     features: [
@@ -123,7 +47,6 @@ const services = [
     category: "Fire Suppression Systems"
   },
   {
-    icon: AlertTriangle,
     title: "Fire Alarm System",
     description: "A fire alarm system is a building system designed to detect, alert occupants, and notify emergency forces of the presence of fire, smoke, carbon monoxide, or other fire-related emergencies.",
     features: [
@@ -136,7 +59,6 @@ const services = [
     category: "Detection Systems"
   },
   {
-    icon: AlertTriangle,
     title: "Fire NOC Services",
     description: "Comprehensive fire NOC services covering Site NOC, Final NOC, and Annual NOC Renewal to ensure your building complies with all fire safety standards as per regulations.",
     features: [
@@ -147,47 +69,7 @@ const services = [
     image: "assets/noc.png",
     category: "Certifications"
   },
-  // {
-  //   icon: AlertTriangle,
-  //   title: "Site NOC",
-  //   description: "An official document issued by the fire department before construction of a building that certifies it meets all required fire safety standards and regulations. Valid for the building permit.",
-  //   features: [
-  //     "Pre-construction fire safety compliance",
-  //     "Required for building permit",
-  //     "Issued by fire department",
-  //     "Ensures adherence to regulations"
-  //   ],
-  //   image: "assets/hs.jpg?fire,certificate",
-  //   category: "Certifications"
-  // },
-  // {
-  //   icon: AlertTriangle,
-  //   title: "Final NOC",
-  //   description: "An official document issued by the fire department after inspection of installed fire systems, certifying compliance with all fire safety standards as per NBC.",
-  //   features: [
-  //     "Post-installation inspection",
-  //     "Validates fire safety compliance",
-  //     "Issued by fire department",
-  //     "Required for occupancy certificate"
-  //   ],
-  //   image: "assets/hs.jpg?fire,inspection",
-  //   category: "Certifications"
-  // },
-  // {
-  //   icon: AlertTriangle,
-  //   title: "Fire NOC Renewal",
-  //   description: "An official document issued yearly after inspection, certifying the building continues to meet all required fire safety standards as per NBC.",
-  //   features: [
-  //     "Annual fire safety compliance",
-  //     "Validates ongoing safety measures",
-  //     "Issued by fire department",
-  //     "Essential for continuous operation"
-  //   ],
-  //   image: "assets/hs.jpg?fire,safety",
-  //   category: "Certifications"
-  // },
   {
-    icon: AlertTriangle,
     title: "Fire Extinguisher Refilling",
     description: "The essential process of inspecting, maintaining, and replenishing the extinguishing agent and pressure in a fire extinguisher after its use or as part of regular maintenance.",
     features: [
@@ -200,7 +82,6 @@ const services = [
     category: "Maintenance Services"
   },
   {
-    icon: AlertTriangle,
     title: "Fire System BOQ Preparation / Consulting",
     description: "To prepare a Bill of Quantities (BOQ) for a fire system, you must understand the project scope, break down the system into its components, quantify materials and labor from project drawings and specifications, and calculate the total costs.",
     features: [
@@ -213,7 +94,6 @@ const services = [
     category: "Consulting Services"
   },
   {
-    icon: AlertTriangle,
     title: "Annual Maintenance Contract",
     description: "Annual maintenance is a set of scheduled and routine services performed on equipment, systems, or facilities over a one-year period to ensure optimal functioning, safety, and longevity.",
     features: [
@@ -253,6 +133,14 @@ const services = [
   }
 ];
 
+  const handleNavigation = (path: string, sectionId?: string) => {
+    if (path === '/') {
+      navigate('/', { state: sectionId ? { scrollTo: sectionId } : undefined });
+    } else {
+      navigate(path);
+    }
+    setIsMenuOpen(false);
+  };
 
   const categories = [...new Set(services.map(service => service.category))];
 
@@ -261,21 +149,24 @@ const services = [
       {/* Header */}
       <header className="bg-white/95 backdrop-blur-sm border-b border-blue-200 shadow-sm sticky top-0 z-50">
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-16">
+          <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <div className="flex items-center space-x-3">
-              {/* <div className="w-12 h-12 bg-gradient-to-r from-white to-gray-200 rounded-xl flex items-center justify-center shadow-lg"> */}
-              <img src="assets/wrightmeplogo.png" alt="Logo" className="h-16 w-30 p-1" />            
-              {/* </div> */}
-              {/* <div>
-                <h1 className="text-xl font-bold text-gray-900">Wright MEP</h1>
-                <p className="text-xs text-blue-600">Engineering Solutions</p>
-              </div> */}
-            </div>
+            <div 
+              onClick={() => handleNavigation('/')}
+              className="flex items-center space-x-3 cursor-pointer group"
+            >
+              {/* <div className="w-30 h-20 rounded-xl flex items-center justify-center group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-105"> */}
+                            <img src="assets/wrightmeplogo.png" alt="Logo" className="h-20 w-30 p-1" />            
+            {/* <div>
+              <h1 className="text-xl font-bold text-blue-900">Wright MEP</h1>
+              <p className="text-xs text-black-600">Engineering Solution</p>
+            </div> */}
+          {/* </div> */}
+          </div>
 
             {/* Back Button */}
             <Button 
-              onClick={() => navigate('/')}
+              onClick={() => handleNavigation('/','services')}
               variant="outline"
               className="flex items-center space-x-2 hover:bg-blue-50 border-blue-200"
             >

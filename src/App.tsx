@@ -7,6 +7,7 @@ import AllServices from './pages/AllServices';
 import ProjectDetail from './pages/ProjectDetail';
 import NotFound from './pages/NotFound';
 import { useEffect } from 'react';
+import AllProjects from './pages/AllProjects';
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,7 @@ const App = () => (
           <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<AllServices />} />
+          <Route path="/projects" element={<AllProjects />} />
           <Route path="/project/:id" element={<ProjectDetail />} />
           <Route path="*" element={<NotFound />} />
           </Routes>

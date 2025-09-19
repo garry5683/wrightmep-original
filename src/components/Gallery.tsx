@@ -1,86 +1,14 @@
 import { useState, useEffect } from 'react';
-import { Eye, ArrowRight } from 'lucide-react';
+import { Eye, ArrowRight, Building, Calendar, MapPin } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import { ProjectService } from '@/services/projectService';
 
 export default function Gallery() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const navigate = useNavigate();
 
-  const projects = [
-    {
-      id: 1,
-      title: "Corporate Office Fire Alarm System",
-      location: "Mumbai, Maharashtra",
-      date: "2023",
-      type: "Commercial",
-      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop",
-      description: "Complete addressable fire alarm system installation for 15-story corporate building with 200+ detection points and integrated emergency response system."
-    },
-    {
-      id: 2,
-      title: "Hospital Wet Riser System",
-      location: "Delhi, NCR",
-      date: "2023",
-      type: "Healthcare",
-      image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop",
-      description: "High-pressure wet riser system for multi-specialty hospital ensuring reliable water supply for emergency response with automated monitoring."
-    },
-    {
-      id: 3,
-      title: "Shopping Mall PA System",
-      location: "Bangalore, Karnataka",
-      date: "2022",
-      type: "Retail",
-      image: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=800&h=600&fit=crop",
-      description: "Comprehensive public address and emergency communication system covering 5 floors with zone-wise control and crystal clear audio quality."
-    },
-    {
-      id: 4,
-      title: "Residential Complex Fire Safety",
-      location: "Pune, Maharashtra",
-      date: "2023",
-      type: "Residential",
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop",
-      description: "Complete fire safety solution including conventional fire alarms and extinguisher systems for 200-unit residential complex with 24/7 monitoring."
-    },
-    {
-      id: 5,
-      title: "Industrial Fire NOC Project",
-      location: "Chennai, Tamil Nadu",
-      date: "2022",
-      type: "Industrial",
-      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=600&fit=crop",
-      description: "Fire NOC compliance and documentation for manufacturing facility with specialized fire suppression systems and regulatory approval."
-    },
-    {
-      id: 6,
-      title: "Hotel Fire Safety Consulting",
-      location: "Goa",
-      date: "2023",
-      type: "Hospitality",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop",
-      description: "Comprehensive fire safety audit and system upgrade recommendations for luxury resort property with guest safety prioritization."
-    },
-    {
-      id: 7,
-      title: "Educational Institution Safety",
-      location: "Hyderabad, Telangana",
-      date: "2022",
-      type: "Educational",
-      image: "https://images.unsplash.com/photo-1581092162384-8987c1d64718?w=800&h=600&fit=crop",
-      description: "Campus-wide fire detection and alarm system covering academic blocks, hostels, and administrative buildings with student safety focus."
-    },
-    {
-      id: 8,
-      title: "Warehouse Fire Protection",
-      location: "Kolkata, West Bengal",
-      date: "2023",
-      type: "Logistics",
-      image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=600&fit=crop",
-      description: "Large-scale fire protection system for logistics warehouse with automated sprinkler and detection systems for inventory protection."
-    }
-  ];
+  const projects = ProjectService.getAllProjects();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -164,17 +92,20 @@ export default function Gallery() {
               <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 lg:p-12 text-white animate-in slide-in-from-bottom duration-1000">
                 <div className="max-w-4xl">
                   <div className="flex flex-wrap items-center gap-4 mb-4">
-                    <span className="bg-blue-600 px-3 py-1 rounded-full text-sm font-medium animate-pulse">
+                    <span className="bg-blue-600 px-3 py-1 rounded-full text-sm font-medium animate-pulse flex items-center gap-1">
+                      <Building className="w-4 h-4" />
                       {currentProject.type}
                     </span>
-                    <span className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-sm">
+                    <span className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-sm flex items-center gap-1">
+                      <Calendar className="w-3 h-3" />
                       {currentProject.date}
                     </span>
-                    <span className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-sm">
+                    <span className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-sm flex items-center gap-1">
+                      <MapPin className="w-3 h-3" />
                       {currentProject.location}
                     </span>
                   </div>
-                  
+
                   <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 animate-in fade-in delay-300">
                     {currentProject.title}
                   </h3>
@@ -243,10 +174,19 @@ export default function Gallery() {
           </div> */}
         </div>
 
+        <div className="text-center mt-8 sm:mt-12">
+          <Button 
+            onClick={() => navigate('/projects')}
+            className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 text-sm sm:text-base"
+          >
+            View All Projects
+            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
+          </Button>
+        </div>
+
         {/* Call to Action */}
-        <div className="text-center mt-16 animate-in fade-in delay-1500">
+        {/* <div className="text-center mt-16 animate-in fade-in delay-1500">
           <div className="bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 rounded-3xl p-8 lg:p-12 text-white shadow-2xl relative overflow-hidden transform hover:scale-105 transition-all duration-500">
-            {/* Animated background pattern */}
             <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent animate-pulse"></div>
             <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full -translate-y-20 translate-x-20 animate-spin-slow"></div>
             
@@ -261,7 +201,7 @@ export default function Gallery() {
               </button>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
