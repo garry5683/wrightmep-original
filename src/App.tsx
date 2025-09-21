@@ -26,7 +26,7 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
-        <HashRouter>
+        {/* <HashRouter>
           <ScrollToTop />
           <Routes>
           <Route path="/" element={<Index />} />
@@ -35,15 +35,17 @@ const App = () => (
           <Route path="/project/:id" element={<ProjectDetail />} />
           <Route path="*" element={<NotFound />} />
           </Routes>
-        </HashRouter>
-      {/* <BrowserRouter>
-        <Routes>
+        </HashRouter> */}
+      <BrowserRouter>
+          <ScrollToTop />
+          <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<AllServices />} />
+          <Route path="/projects" element={<AllProjects />} />
           <Route path="/project/:id" element={<ProjectDetail />} />
           <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter> */}
+          </Routes>
+      </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
 );
