@@ -81,7 +81,7 @@ export default function Contact() {
                   </div>
                 </div>
                 
-                <form className="space-y-4 sm:space-y-6" action="https://formspree.io/f/mvgblpdw" method="POST">
+                <form className="space-y-4 sm:space-y-6" action="https://formspree.io/f/xnngajok" method="POST">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="name" className="text-gray-700 font-medium text-sm">Full Name *</Label>
