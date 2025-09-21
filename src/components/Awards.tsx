@@ -27,6 +27,14 @@ export default function Awards() {
     },
     {
       icon: Award,
+      title: "With Appreciation and Regards",
+      year: "2020",
+      description: "An award from Steel and Industrial Forgings Ltd. (SIFL), a Govt. of Kerala",
+      category: "Recognition",
+      image: "assets/awards/award1.jpg?w=400&h=300&fit=crop"
+    },
+    {
+      icon: Award,
       title: "Best Compliments",
       year: "2020",
       description: "An award given to Wright MEP Engineering Solution for outstanding performance in Fire Fighting works of the 'L Complex Shopping Mall' from L Complex Management.",
@@ -147,12 +155,12 @@ export default function Awards() {
                     {/* <div className="absolute top-4 left-4 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-xl flex items-center justify-center shadow-lg">
                       <IconComponent className="w-6 h-6 text-blue-600" />
                     </div> */}
-                    <div className="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    {/* <div className="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                       {award.year}
-                    </div>
+                    </div> */}
                   </div>
 
-                  <CardContent className="p-6 text-center">
+                  {/* <CardContent className="p-6 text-center">
                     <div className="space-y-3">
                       <div className="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">
                         {award.category}
@@ -166,7 +174,7 @@ export default function Awards() {
                         {award.description}
                       </p>
                     </div>
-                  </CardContent>
+                  </CardContent> */}
                 </Card>
               );
             })}

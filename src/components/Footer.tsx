@@ -188,7 +188,7 @@ const yearsActive = getYearsSince(startYear);
         <div className="border-t border-slate-700 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-slate-400">
-              © {currentYear} Wright MEP Engineering Solutions. All rights reserved.
+              © {currentYear} Wright MEP Engineering Solution. All rights reserved.
             </p>
             {/* <div className="flex space-x-6 text-sm text-slate-400">
               <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
