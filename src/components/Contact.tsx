@@ -227,8 +227,10 @@ export default function Contact() {
                         <h4 className="font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-1 text-sm sm:text-base">
                           Email Us
                         </h4>
-                        <p className="text-gray-800 font-medium text-xs sm:text-sm truncate">project@wrightmep.com</p>
-                        <p className="text-gray-600 text-xs sm:text-sm truncate">info@wrightmep.com</p>
+                        <p className="text-gray-800 font-medium text-xs sm:text-sm truncate">wrightmep@gmail.com</p>
+                        <p className="text-gray-600 text-xs sm:text-sm truncate">
+                          {/* info@wrightmep.com */}
+                          </p>
                         <p className="text-gray-500 text-xs mt-1">Get detailed responses to your queries</p>
                       </div>
                     </div>

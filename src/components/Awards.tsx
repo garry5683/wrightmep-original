@@ -11,51 +11,27 @@ export default function Awards() {
   const awards = [
     {
       icon: Award,
-      title: "ISO 9001:2015 Certified",
+      title: "With Appreciation and Regards",
       year: "2020",
-      description: "International standard for quality management systems",
-      category: "Quality Certification",
-      image: "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=400&h=300&fit=crop"
+      description: "An award from Steel and Industrial Forgings Ltd. (SIFL), a Govt. of Kerala",
+      category: "Recognition",
+      image: "assets/awards/award1.jpg?w=400&h=300&fit=crop"
     },
     {
-      icon: Shield,
-      title: "NFPA Compliance Expert",
-      year: "2019",
-      description: "National Fire Protection Association standards compliance",
-      category: "Safety Standards",
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop"
+      icon: Award,
+      title: "Best Compliments",
+      year: "2020",
+      description: "An award given to Wright MEP Engineering Solution for outstanding performance in Fire Fighting works of the 'L Complex Shopping Mall' from L Complex Management.",
+      category: "Outstanding Performance",
+      image: "assets/awards/award2.jpg?w=400&h=300&fit=crop"
     },
     {
-      icon: Trophy,
-      title: "Best Fire Safety Company",
-      year: "2022",
-      description: "Regional excellence award for outstanding service",
-      category: "Industry Recognition",
-      image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=400&h=300&fit=crop"
-    },
-    {
-      icon: Star,
-      title: "Government Approved Vendor",
-      year: "2018",
-      description: "Authorized vendor for government fire safety projects",
-      category: "Government Recognition",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop"
-    },
-    {
-      icon: Medal,
-      title: "Safety Excellence Award",
-      year: "2021",
-      description: "Outstanding contribution to fire safety engineering",
-      category: "Excellence Award",
-      image: "https://images.unsplash.com/photo-1551836022-4c4c79ecde51?w=400&h=300&fit=crop"
-    },
-    {
-      icon: CheckCircle,
-      title: "Zero Incident Record",
-      year: "2023",
-      description: "500+ projects completed without safety incidents",
-      category: "Safety Achievement",
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop"
+      icon: Award,
+      title: "Best Compliments",
+      year: "2020",
+      description: "An award given to Wright MEP Engineering Solution for outstanding performance in Fire Fighting works of the 'L Complex Shopping Mall' from L Complex Management.",
+      category: "Outstanding Performance",
+      image: "assets/awards/award2.jpg?w=400&h=300&fit=crop"
     }
   ];
 
@@ -74,7 +50,7 @@ export default function Awards() {
     if (isAutoPlaying) {
       const interval = setInterval(() => {
         setCurrentIndex((prev) => (prev + 1) % awards.length);
-      }, 4000);
+      }, 3000);
       return () => clearInterval(interval);
     }
   }, [isAutoPlaying, awards.length]);
@@ -168,9 +144,9 @@ export default function Awards() {
                       className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                    <div className="absolute top-4 left-4 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-xl flex items-center justify-center shadow-lg">
+                    {/* <div className="absolute top-4 left-4 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-xl flex items-center justify-center shadow-lg">
                       <IconComponent className="w-6 h-6 text-blue-600" />
-                    </div>
+                    </div> */}
                     <div className="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                       {award.year}
                     </div>

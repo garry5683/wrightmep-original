@@ -55,7 +55,7 @@ export default function About() {
             About Wright MEP Engineering Solutions
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Your trusted partner in fire safety engineering with over {yearsActive} years of experience 
+            Your trusted partner in fire safety engineering with over {yearsActive}+ years of experience 
             in protecting lives and property through innovative fire protection solutions.
           </p>
         </div>

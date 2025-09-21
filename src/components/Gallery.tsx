@@ -8,7 +8,7 @@ export default function Gallery() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const navigate = useNavigate();
 
-  const projects = ProjectService.getAllProjects();
+  const projects = ProjectService.getAllProjectsMain();
 
   useEffect(() => {
     const interval = setInterval(() => {

@@ -3,50 +3,36 @@ import { Badge } from '@/components/ui/badge';
 import { Linkedin, Mail, Phone } from 'lucide-react';
 
 export default function Team() {
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const teamMembers = [
     {
-      name: "Rajesh Kumar",
-      position: "Founder & CEO",
-      experience: "20+ Years",
+      name: "Xavier Antony",
+      position: "Co-Founder & Director",
+      // experience: "20+ Years",
       specialization: "Fire Safety Engineering",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+      image: "?w=400&h=400&fit=crop&crop=face",
       description: "Leading fire safety expert with extensive experience in industrial and commercial fire protection systems.",
-      qualifications: ["B.Tech Fire Safety", "NFPA Certified", "ISO Lead Auditor"],
-      email: "rajesh@wrightmep.com",
-      phone: "+91-98765-43210"
+      qualifications: ["BE Mechanical Engineering"],
+      // email: "rajesh@wrightmep.com",
+      phone: "+91-98952-77526"
     },
     {
-      name: "Priya Sharma",
-      position: "Co-Founder & Technical Director",
-      experience: "18+ Years",
-      specialization: "Fire System Design",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face",
+      name: "Rohith k Ravi",
+      position: "Co-Founder & Director",
+      // experience: "18+ Years",
+      specialization: "Fire Safety Engineering",
+      image: "?w=400&h=400&fit=crop&crop=face",
       description: "Expert in fire alarm systems design and implementation with focus on smart building integration.",
-      qualifications: ["M.Tech Safety Engineering", "NFPA Member", "Green Building Certified"],
-      email: "priya@wrightmep.com",
-      phone: "+91-87654-32109"
-    },
-    {
-      name: "Amit Patel",
-      position: "Chief Operations Officer",
-      experience: "15+ Years",
-      specialization: "Project Management",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
-      description: "Operations specialist ensuring seamless project delivery and client satisfaction across all verticals.",
-      qualifications: ["MBA Operations", "PMP Certified", "Six Sigma Black Belt"],
-      email: "amit@wrightmep.com",
-      phone: "+91-76543-21098"
-    },
-    {
-      name: "Dr. Sunita Reddy",
-      position: "Head of R&D",
-      experience: "12+ Years",
-      specialization: "Fire Safety Research",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
-      description: "Research leader developing innovative fire safety solutions and advancing industry standards.",
-      qualifications: ["PhD Fire Engineering", "Research Publications", "Innovation Awards"],
-      email: "sunita@wrightmep.com",
-      phone: "+91-65432-10987"
+      qualifications: ["BE Mechanical Engineering"],
+      // email: "priya@wrightmep.com",
+      phone: "+91-97456-95020"
     }
   ];
 
@@ -73,7 +59,8 @@ export default function Team() {
         </div>
 
         {/* Team Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="flex justify-center">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl">
           {teamMembers.map((member, index) => (
             <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-0 shadow-lg hover:-translate-y-3 bg-white overflow-hidden">
               {/* Member Photo */}
@@ -86,12 +73,12 @@ export default function Team() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                 
                 {/* Experience Badge */}
-                <Badge className="absolute top-4 right-4 bg-blue-600 text-white border-0 shadow-lg">
+                {/* <Badge className="absolute top-4 right-4 bg-blue-600 text-white border-0 shadow-lg">
                   {member.experience}
-                </Badge>
+                </Badge> */}
 
                 {/* Contact Icons - Show on Hover */}
-                <div className="absolute bottom-4 left-4 right-4 flex justify-center space-x-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                {/* <div className="absolute bottom-4 left-4 right-4 flex justify-center space-x-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <button className="w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-blue-600 hover:bg-white transition-colors">
                     <Mail className="w-4 h-4" />
                   </button>
@@ -101,7 +88,7 @@ export default function Team() {
                   <button className="w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-blue-600 hover:bg-white transition-colors">
                     <Linkedin className="w-4 h-4" />
                   </button>
-                </div>
+                </div> */}
               </div>
 
               <CardContent className="p-6">
@@ -132,10 +119,10 @@ export default function Team() {
 
                   {/* Contact Info */}
                   <div className="pt-3 border-t border-gray-100 space-y-1">
-                    <div className="flex items-center space-x-2 text-xs text-gray-600">
+                    {/* <div className="flex items-center space-x-2 text-xs text-gray-600">
                       <Mail className="w-3 h-3" />
                       <span>{member.email}</span>
-                    </div>
+                    </div> */}
                     <div className="flex items-center space-x-2 text-xs text-gray-600">
                       <Phone className="w-3 h-3" />
                       <span>{member.phone}</span>
@@ -145,6 +132,7 @@ export default function Team() {
               </CardContent>
             </Card>
           ))}
+          </div>
         </div>
 
         {/* Call to Action */}
@@ -160,7 +148,9 @@ export default function Team() {
                 Get in touch with our experienced professionals for personalized fire safety solutions 
                 tailored to your specific requirements.
               </p>
-              <button className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
+              <button 
+                onClick={() => scrollToSection('contact')}
+                className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
                 Schedule a Consultation
               </button>
             </div>

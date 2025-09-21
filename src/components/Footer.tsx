@@ -126,14 +126,15 @@ const yearsActive = getYearsSince(startYear);
           <div>
             <h4 className="text-lg font-semibold mb-6 text-white">Our Services</h4>
             <ul className="space-y-3 text-sm text-slate-300">
-              <li className="hover:text-white transition-colors cursor-pointer">Fire Alarm Systems</li>
               <li className="hover:text-white transition-colors cursor-pointer">Fire Hydrant Systems</li>
+              <li className="hover:text-white transition-colors cursor-pointer">Fire Sprinkler System</li>
+              <li className="hover:text-white transition-colors cursor-pointer">Fire Alarm Systems</li>
+              <li className="hover:text-white transition-colors cursor-pointer">Fire NOC Services</li>
+              <li className="hover:text-white transition-colors cursor-pointer">Fire Extinguisher Refilling</li>
+              <li className="hover:text-white transition-colors cursor-pointer">Fire System BOQ Preparation / Consulting</li>
               <li className="hover:text-white transition-colors cursor-pointer">Wet Riser Systems</li>
               <li className="hover:text-white transition-colors cursor-pointer">PA & Talk Back Systems</li>
-              <li className="hover:text-white transition-colors cursor-pointer">Fire NOC Services</li>
-              <li className="hover:text-white transition-colors cursor-pointer">Extinguisher Refilling</li>
-              <li className="hover:text-white transition-colors cursor-pointer">BOQ Preparation</li>
-              <li className="hover:text-white transition-colors cursor-pointer">Fire Safety Consulting</li>
+              <li className="hover:text-white transition-colors cursor-pointer">Annual Maintenance Contract</li>
             </ul>
           </div>
 
@@ -155,8 +156,8 @@ const yearsActive = getYearsSince(startYear);
                   <Mail className="w-4 h-4 text-blue-400" />
                 </div>
                 <div className="text-sm text-slate-300">
-                  <p className="hover:text-white transition-colors cursor-pointer">projects@wrightmep.com</p>
-                  <p className="hover:text-white transition-colors cursor-pointer">info@wrightmep.com</p>
+                  <p className="hover:text-white transition-colors cursor-pointer">wrightmep@gmail.com</p>
+                  {/* <p className="hover:text-white transition-colors cursor-pointer">info@wrightmep.com</p> */}
                 </div>
               </div>
               <div className="flex items-start space-x-3 group">
