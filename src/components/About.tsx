@@ -52,7 +52,7 @@ export default function About() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            About Wright MEP Engineering Solutions
+            About Wright MEP Engineering Solution
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Your trusted partner in fire safety engineering with over {yearsActive}+ years of experience 
