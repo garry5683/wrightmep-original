@@ -20,7 +20,8 @@ export default function Gallery() {
   const currentProject = projects[currentIndex];
 
   const handleViewProject = () => {
-    navigate(`/project/${currentProject.id}`);
+    ProjectService.setCurrentProjectId(currentProject.id);
+    navigate(`/project`);
   };
 
   return (

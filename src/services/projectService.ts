@@ -11,6 +11,8 @@ export interface Project {
   images: string[];
 }
 
+export let currentProject:number=1;
+
 export const projects: Project[] = [
   {
     "id": 1,
@@ -1048,5 +1050,13 @@ export class ProjectService {
   }
   static getAllProjectsMain(): Project[] {
     return Mainprojects;
+  }
+
+  
+  static setCurrentProjectId(id: number) {
+    currentProject=id;
+  }
+  static getCurrentProjectId() {
+    return currentProject;
   }
 }

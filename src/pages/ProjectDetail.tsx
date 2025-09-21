@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { ProjectService } from '@/services/projectService';
 
 export default function ProjectDetail() {
-  const { id } = useParams();
+  const  id  = ProjectService.getCurrentProjectId()
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -38,8 +38,8 @@ export default function ProjectDetail() {
     return colors[type as keyof typeof colors] || 'bg-gray-100 text-gray-800';
   };
 
-  const currentProject = projects.find(p => p.id === parseInt(id || '1'));
-  const currentIndex = projects.findIndex(p => p.id === parseInt(id || '1'));
+  const currentProject = projects.find(p => p.id === (id || '1'));
+  const currentIndex = projects.findIndex(p => p.id === (id || '1'));
 
   if (!currentProject) {
     return (
@@ -54,12 +54,14 @@ export default function ProjectDetail() {
 
   const nextProject = () => {
     const nextIndex = (currentIndex + 1) % projects.length;
-    navigate(`/project/${projects[nextIndex].id}`);
+    ProjectService.setCurrentProjectId(projects[nextIndex].id);
+    navigate(`/project`);
   };
 
   const prevProject = () => {
     const prevIndex = currentIndex === 0 ? projects.length - 1 : currentIndex - 1;
-    navigate(`/project/${projects[prevIndex].id}`);
+    ProjectService.setCurrentProjectId(projects[prevIndex].id);
+    navigate(`/project`);
   };
 
   return (

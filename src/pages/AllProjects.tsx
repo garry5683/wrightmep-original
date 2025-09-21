@@ -37,6 +37,11 @@ export default function AllProjects() {
     setIsMenuOpen(false);
   };
 
+    const handleNavigationtoAllProjects = (currentProjectId:number) => {
+    ProjectService.setCurrentProjectId(currentProjectId);
+      navigate('/project');
+  };
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50">
@@ -163,7 +168,7 @@ export default function AllProjects() {
                     {/* View Project Button */}
                       {/* <div className="mt-auto"> */}
                     <Button
-                      onClick={() => navigate(`/project/${project.id}`)}
+                      onClick={() => handleNavigationtoAllProjects(project.id)}
                       className="w-full bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center gap-2"
                     >
                       View Project Details
