@@ -92,17 +92,17 @@ export default function Hero() {
           {/* Content */}
           <div className="space-y-6 sm:space-y-8 animate-in slide-in-from-left duration-1000 text-center lg:text-left">
             <div className="space-y-4 sm:space-y-6">
-              <div className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-3 sm:px-4 py-2 rounded-full border border-white/30 animate-in fade-in delay-300">
+              {/* <div className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-3 sm:px-4 py-2 rounded-full border border-white/30 animate-in fade-in delay-300">
                 <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
                 <span className="text-xs sm:text-sm font-medium text-white">Trusted Fire Safety Experts</span>
-              </div>
+              </div> */}
               
               <h1 className="text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight animate-in slide-in-from-bottom delay-500">
                 Your Safety 
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-blue-100 block animate-gradient">Is Our Business</span>
                 {/* designing Peace of Mind */}
               </h1>
-              <p className="text-lg sm:text-xl text-white/90 leading-relaxed animate-in fade-in delay-700 max-w-2xl mx-auto lg:mx-0">
+              <p className="text-lg sm:text-xl text-white/90 leading-relaxed animate-in fade-in delay-700 max-w-2xl mx-auto lg:mx-0 font-bold">
                 The inspiration behind Wright MEP was a determination to provide world class fire fighting system services
               </p>
             </div>
