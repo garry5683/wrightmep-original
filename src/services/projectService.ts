@@ -36,7 +36,7 @@ export const projects: Project[] = [
     "location": "Kodaly",
     "date": "2022",
     "type": "Assembly",
-    "image": "",
+    "image": "assets/projects/sreedevi-cinemas/img1.jpg",
     "description": "Installation of fire alarm, fire hydrant for safety compliance.",
     "detailedDescription": "Fire alarm, fire hydrant installation at Kodaly in 2022 ensures compliance with Assembly safety standards, enhancing emergency readiness and fire protection.",
     "features": [
@@ -54,7 +54,7 @@ export const projects: Project[] = [
     "location": "Thrissur",
     "date": "2019",
     "type": "Educational",
-    "image": "",
+    "image": "assets/projects/little-queen-public-school/img1.jpg",
     "description": "Installation of fire system hydrant system for safety compliance.",
     "detailedDescription": "Fire system hydrant system installation at Thrissur in 2019 ensures compliance with Educational Building safety standards, enhancing emergency readiness and fire protection.",
     "features": [
@@ -71,7 +71,7 @@ export const projects: Project[] = [
     "location": "Kuriachira",
     "date": "2020",
     "type": "Educational",
-    "image": "",
+    "image": "assets/projects/st-josephs-kuriachira/img1.jpg",
     "description": "Installation of fire hydrant system for safety compliance.",
     "detailedDescription": "Fire hydrant system installation at Kuriachira in 2020 ensures compliance with Educational Building safety standards, enhancing emergency readiness and fire protection.",
     "features": [
@@ -88,7 +88,7 @@ export const projects: Project[] = [
     "location": "Thrissur",
     "date": "2019",
     "type": "Assembly",
-    "image": "",
+    "image": "assets/projects/amala-nagar-church/img1.jpg",
     "description": "Installation of fire hydrant system, fire alarm system for safety compliance.",
     "detailedDescription": "Fire hydrant system, fire alarm system installation at Thrissur in 2019 ensures compliance with Assembly Building safety standards, enhancing emergency readiness and fire protection.",
     "features": [
@@ -161,7 +161,7 @@ export const projects: Project[] = [
     "location": "Vennala",
     "date": "2020",
     "type": "Commercial",
-    "image": "",
+    "image": "assets/projects/ceat/img1.jpg",
     "description": "Installation of fire alarm, sprinkler system for safety compliance.",
     "detailedDescription": "Fire alarm, sprinkler system installation at Vennala in 2020 ensures compliance with Commercial Building safety standards, enhancing emergency readiness and fire protection.",
     "features": [
@@ -179,7 +179,7 @@ export const projects: Project[] = [
     "location": "Aduvassery",
     "date": "2020",
     "type": "Educational",
-    "image": "",
+    "image": "assets/projects/st-arnolds-public-school/img1.jpg",
     "description": "Installation of fire hydrant system for safety compliance.",
     "detailedDescription": "Fire hydrant system installation at Aduvassery in 2020 ensures compliance with Educational Building safety standards, enhancing emergency readiness and fire protection.",
     "features": [
@@ -196,7 +196,7 @@ export const projects: Project[] = [
     "location": "Cherpu",
     "date": "2020",
     "type": "Assembly",
-    "image": "",
+    "image": "assets/projects/sam-palace/img1.jpg",
     "description": "Installation of fire hydrant system, fire alarm for safety compliance.",
     "detailedDescription": "Fire hydrant system, fire alarm installation at Cherpu in 2020 ensures compliance with Assembly safety standards, enhancing emergency readiness and fire protection.",
     "features": [
@@ -214,7 +214,7 @@ export const projects: Project[] = [
     "location": "Kodakara",
     "date": "2021",
     "type": "Commercial",
-    "image": "",
+    "image": "assets/projects/panthalookaran/img1.jpg",
     "description": "Installation of fire alarm, fire hydrant for safety compliance.",
     "detailedDescription": "Fire alarm, fire hydrant installation at Kodakara in 2021 ensures compliance with Commercial safety standards, enhancing emergency readiness and fire protection.",
     "features": [
@@ -268,7 +268,7 @@ export const projects: Project[] = [
     "location": "Kakkanad",
     "date": "2021",
     "type": "Educational",
-    "image": "",
+    "image": "assets/projects/charles-borremeo-convent/img1.png",
     "description": "Installation of fire hydrant for safety compliance.",
     "detailedDescription": "Fire hydrant installation at Kakkanad in 2021 ensures compliance with Educational safety standards, enhancing emergency readiness and fire protection.",
     "features": [
@@ -348,7 +348,9 @@ export const projects: Project[] = [
       "24/7 monitoring and maintenance available",
       "Emergency response integration"
     ],
-    "images": [ ]
+    "images": [
+      "assets/projects/Regional science centre/img2.jpg"
+     ]
   },
   {
     "id": 20,
@@ -373,7 +375,7 @@ export const projects: Project[] = [
     "location": "Thodupuzha",
     "date": "2019",
     "type": "Commercial",
-    "image": "",
+    "image": "assets/projects/kalyan-jewellers/img1.jpg",
     "description": "Installation of fire alarm with smoke detector system for safety compliance.",
     "detailedDescription": "Fire alarm with smoke detector system installation at Thodupuzha in 2019 ensures compliance with Commercial safety standards, enhancing emergency readiness and fire protection.",
     "features": [
@@ -390,7 +392,7 @@ export const projects: Project[] = [
     "location": "Athani",
     "date": "2021",
     "type": "Industrial",
-    "image": "",
+    "image": "assets/projects/sifl/img1.jpg",
     "description": "Installation of wet riser system, fire alarm, smoke detector system for safety compliance.",
     "detailedDescription": "Wet riser system, fire alarm, smoke detector system installation at Athani in 2021 ensures compliance with Industrial safety standards, enhancing emergency readiness and fire protection.",
     "features": [
@@ -409,7 +411,7 @@ export const projects: Project[] = [
     "location": "Bangalore",
     "date": "2020",
     "type": "Educational",
-    "image": "",
+    "image": "assets/projects/st-anne's-banglore/img1.jpg",
     "description": "Installation of fire hydrant and sprinkler system for safety compliance.",
     "detailedDescription": "Fire hydrant and sprinkler system installation at Bangalore in 2020 ensures compliance with Educational safety standards, enhancing emergency readiness and fire protection.",
     "features": [
@@ -482,7 +484,7 @@ export const projects: Project[] = [
     "location": "Chirakkal",
     "date": "2021",
     "type": "Assembly",
-    "image": "",
+    "image": "assets/projects/chirakal-church/img1.jpg",
     "description": "Installation of fire alarm, fire hydrant system for safety compliance.",
     "detailedDescription": "Fire alarm, fire hydrant system installation at Chirakkal in 2021 ensures compliance with Assembly safety standards, enhancing emergency readiness and fire protection.",
     "features": [
@@ -736,11 +738,11 @@ export const projects: Project[] = [
   },
   {
     "id": 41,
-    "title": "Euphradia Training College",
+    "title": "Euphrasia Training College",
     "location": "Kattoor",
     "date": "2025",
     "type": "Educational",
-    "image": "",
+    "image": "assets/projects/euphrasia-training-college/img1.jpg",
     "description": "Installation of fire hydrant, fire alarm system for safety compliance.",
     "detailedDescription": "Fire hydrant, fire alarm system installation at Kattoor in 2025 ensures compliance with Educational safety standards, enhancing emergency readiness and fire protection.",
     "features": [
@@ -777,7 +779,7 @@ export const projects: Project[] = [
     "location": "Vytila",
     "date": "2024",
     "type": "Residential (G+28)",
-    "image": "",
+    "image": "assets/projects/nanma-one/img1.jpg",
     "description": "Installation of fire system, fire alarm system for safety compliance.",
     "detailedDescription": "Fire system, fire alarm system installation at Vytila in 2024 ensures compliance with Residential (G+28) safety standards, enhancing emergency readiness and fire protection.",
     "features": [
