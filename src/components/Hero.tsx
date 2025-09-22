@@ -32,7 +32,7 @@ export default function Hero() {
           // Animate projects counter
           let projectCount = 0;
           const projectInterval = setInterval(() => {
-            projectCount += 10;
+            projectCount += 5;
             if (projectCount >= 300) {
               projectCount = 300;
               clearInterval(projectInterval);

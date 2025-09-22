@@ -166,15 +166,13 @@ export default function AllProjects() {
                     </div>
 
                     {/* View Project Button */}
-                      {/* <div className="mt-auto"> */}
-                    <Button
-                      onClick={() => handleNavigationtoAllProjects(project.id)}
-                      className="w-full bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center gap-2"
-                    >
-                      View Project Details
-                      <ArrowRight className="w-4 h-4" />
-                    </Button>
-                    {/* </div> */}
+                      <Button
+                        onClick={() => handleNavigationtoAllProjects(project.id)}
+                        className="w-full bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center gap-2"
+                      >
+                        View Project Details
+                        <ArrowRight className="w-4 h-4" />
+                      </Button>
                   </div>
                 </div>
               ))}
