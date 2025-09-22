@@ -805,25 +805,6 @@ export const Mainprojects: Project[] =[
     "images": [ ]
   },
   {
-    "id": 8,
-    "title": "Nanma IOC",
-    "location": "Kaloor",
-    "date": "2020",
-    "type": "Residential (G+19)",
-    "image": "assets/projects/Ioc nanma/img1.jpg",
-    "description": "Installation of fire alarm, PA talkback system, wet riser system for safety compliance.",
-    "detailedDescription": "Fire alarm, pa talkback system, wet riser system installation at Kaloor in 2020 ensures compliance with Residential Building (G+19) safety standards, enhancing emergency readiness and fire protection.",
-    "features": [
-      "Fire alarm included in system",
-      "Pa talkback system included in system",
-      "Wet riser system included in system",
-      "Complies with Residential Building (G+19) safety regulations",
-      "24/7 monitoring and maintenance available",
-      "Emergency response integration"
-    ],
-    "images": [ ]
-  },
-  {
     "id": 32,
     "title": "Indel M27",
     "location": "Thripunithura",
