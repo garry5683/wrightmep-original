@@ -9,6 +9,7 @@ import Team from '@/components/Team';
 import About from '@/components/About';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import SEO from '@/components/SEO';
 
 export default function Index() {
   const location = useLocation();
@@ -27,6 +28,7 @@ export default function Index() {
 
   return (
     <div className="min-h-screen">
+      <SEO />
       <Header />
       <Hero />
       <Services />

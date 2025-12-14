@@ -14,6 +14,8 @@ import {
   Calculator,
   Users
 } from 'lucide-react';
+import SEO from '@/components/SEO';
+import { generateServiceSchema, generateBreadcrumbSchema } from '@/lib/seo';
 
 export default function AllServices() {
   const navigate = useNavigate();
@@ -144,8 +146,31 @@ const services = [
 
   const categories = [...new Set(services.map(service => service.category))];
 
+  // Generate breadcrumb schema
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.wrightmep.com/' },
+    { name: 'Services', url: 'https://www.wrightmep.com/services' }
+  ]);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50">
+      <SEO 
+        title="Fire Safety Services"
+        description="Comprehensive fire safety services including fire alarm systems, wet riser systems, PA systems, Fire NOC, sprinkler systems, and professional consulting solutions."
+        keywords={[
+          'fire safety services',
+          'fire alarm systems',
+          'wet riser systems',
+          'PA systems',
+          'fire NOC services',
+          'fire sprinkler systems',
+          'fire hydrant systems',
+          'fire safety consulting',
+          'annual maintenance contract',
+          'fire extinguisher refilling'
+        ]}
+        jsonLd={breadcrumbSchema}
+      />
       {/* Header */}
       <header className="bg-white/95 backdrop-blur-sm border-b border-blue-200 shadow-sm sticky top-0 z-50">
         <div className="container mx-auto px-4">

@@ -3,6 +3,8 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft, Phone, Mail, Home, MapPin, Calendar, ArrowRight, Building } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { ProjectService } from '@/services/projectService';
+import SEO from '@/components/SEO';
+import { generateBreadcrumbSchema } from '@/lib/seo';
 
 export default function AllProjects() {
   const navigate = useNavigate();
@@ -42,9 +44,28 @@ export default function AllProjects() {
       navigate('/project');
   };
 
+  // Generate breadcrumb schema
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.wrightmep.com/' },
+    { name: 'Projects', url: 'https://www.wrightmep.com/projects' }
+  ]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50">
+      <SEO 
+        title="Our Projects"
+        description="Explore our portfolio of fire safety projects including commercial buildings, hospitals, residential complexes, hotels, and industrial facilities with comprehensive fire protection systems."
+        keywords={[
+          'fire safety projects',
+          'fire protection portfolio',
+          'commercial fire safety',
+          'hospital fire systems',
+          'residential fire protection',
+          'industrial fire safety',
+          'fire safety case studies'
+        ]}
+        jsonLd={breadcrumbSchema}
+      />
       {/* Header */}
       <header className="bg-white/95 backdrop-blur-sm border-b border-blue-200 shadow-sm sticky top-0 z-50">
         <div className="container mx-auto px-4">

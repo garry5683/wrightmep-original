@@ -157,7 +157,7 @@ const yearsActive = getYearsSince(startYear);
                 </div>
                 <div className="text-sm text-slate-300">
                   <p className="hover:text-white transition-colors cursor-pointer">wrightmep@gmail.com</p>
-                  {/* <p className="hover:text-white transition-colors cursor-pointer">info@wrightmep.com</p> */}
+                  {/* <p className="hover:text-white transition-colors cursor-pointer">wrightmep@gmail.com</p> */}
                 </div>
               </div>
               <div className="flex items-start space-x-3 group">

@@ -1,8 +1,16 @@
 import { Button } from '@/components/ui/button';
+import { Home, ArrowLeft } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import SEO from '@/components/SEO';
 
 export default function NotFoundPage() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-gray-50 to-blue-50 p-6 text-center">
+      <SEO 
+        title="Page Not Found"
+        description="The page you're looking for doesn't exist."
+        noindex={true}
+      />
       <div className="space-y-6 max-w-md">
         <div className="space-y-3">
           <h1 className="text-8xl font-bold text-blue-600">404</h1>

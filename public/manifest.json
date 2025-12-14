@@ -1,0 +1,23 @@
+{
+  "name": "Wright MEP Engineering Solutions",
+  "short_name": "Wright MEP",
+  "description": "Professional fire safety engineering services including fire alarm systems, wet riser systems, PA systems, Fire NOC, and consulting solutions.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1a1a1a",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "engineering", "safety"],
+  "lang": "en-US",
+  "dir": "ltr",
+  "scope": "/",
+  "prefer_related_applications": false
+}
